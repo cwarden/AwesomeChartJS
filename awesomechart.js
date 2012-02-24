@@ -807,7 +807,9 @@ function AwesomeChart(canvasElementId){
             indices.push(i);
         }
         
-        indices.numericSortReverse(this.data);
+        if (!this.noSort) {
+            indices.numericSortReverse(this.data);
+        }
         
         
         
